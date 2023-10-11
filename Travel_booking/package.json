@@ -1,14 +1,16 @@
 {
-  "name": "travel-booking",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "travel_booking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
-  "devDependencies": {
-    "vite": "^4.4.5"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
   }
 }

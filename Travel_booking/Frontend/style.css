@@ -58,22 +58,33 @@ a{
   color: #f5fccd;
 
 }
+h1,h2,h3{
+  margin: 0;
+}
 #app {
   width: 100%;
   /* height: calc(300vh - 50px); */
 }
 
-#app .box1,
-#app .box2,
-#app .box3 {
+#app .box1{
   height: calc(100vh - 80px);
+
   width: 100%;
-  background-color: #78D6C6;
+  overflow: hidden;
 }
+
+#app .box2
+{
+  height: 100vh;
+  width: 100%;
+  background-color: #f5fccd;
+}
+
+
 .overlay{
   position: absolute;
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100vh - 80px);
   background-color: rgba(0, 0, 0, 0.5);
   /* z-index: -1; */
 }
@@ -173,18 +184,90 @@ input[type="date"]:before {
   color: #419197;
 }
 
+.trip-section{
+  width: 95%;
+  height: 100%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  color: #12486B;
+  overflow: hidden;
+}
+.headings{
+  padding: 10px;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.card-section{
+  width: 95%;
+  display: grid;
+  gap:1rem;
+  grid-template-columns: 1fr 1fr 1fr ;
+  /* grid-template-rows: 1fr; */
+}
+
+.card{
+  width: 350px;
+  background-color: #f5fccd;
+  /* background-color: #12486B; */
+  box-shadow: 0 20px 25px -5px rgb(0,0,0,0.2), 0 8px 10px -6px rgb(0,0,0,0.2);
+
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card-img{
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+.card-content{
+  /* background-color: aqua; */
+  padding-left:1rem ;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.card-heading{
+  margin: 0;
+}
+
+
 
 .footer {
   width: 100%;
-  height: 200px;
-  background-color: #1a1a1a;
+  height: 350px;
+  background-color: #12486B;
 }
 
 .footer .containerf {
   width: 90%;
-  height: 100%;
-  margin: auto;
+  height: 90%;
+  padding-top: 2rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
+.footer-content{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+}
+.footer-content .description{
+  width: 50%;
+}
+
+/* .footer-content .links{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+} */
+
 
 
 
