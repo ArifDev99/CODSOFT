@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.main{
+    width:100%;
+    /* margin: 0 auto; */
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    color:#1a1a1a ;
+}
+
+.register-section{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    background-color: #f5fccf;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-box{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+h3{
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:8px
+}
+
+.message-sec{
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #646cff;
+}
+
+
+input{
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    border-width: 0px;
+    border-bottom: solid 1px black;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+}
+
+
+label{
+    display: block;
+    width: 100%;
+    /* background-color: black; */
+}
+
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #419197;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+button:hover {
+    border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+.img-section{
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    
+}
+
+#bg-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
