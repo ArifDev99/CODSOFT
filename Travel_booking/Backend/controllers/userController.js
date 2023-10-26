@@ -90,7 +90,7 @@ const loginUser=async(req,res)=>{
         const correctpass=await bcrypt.compare(password,isuserExist.password)
 
         if(!correctpass){
-            return res.status(400).json({message:"Something went Worng"}) 
+            return res.status(400).json({message:"Invalid Crendentials"}) 
         }
 
 

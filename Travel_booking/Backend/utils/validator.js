@@ -13,7 +13,7 @@ const validemail=(email)=>{
 }
 
 const validpassword=(password)=>{
-    const passregx=new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/)
+    const passregx=new RegExp(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,15}$/)
     return passregx.test(password)
 
 }
