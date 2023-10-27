@@ -7,7 +7,12 @@ const userModel=mongoose.Schema(
         lastname:{type:String,required:true},
         email:{type:String,required:true,unique:true},
         password:{type:String,required:true},
-        phone_no:{type:Number,required:true}
+        
+        phone_no:{type:Number,required:true},
+        isAdmin:{
+            type:Boolean,
+            default:false,
+        }
 
     },
     {

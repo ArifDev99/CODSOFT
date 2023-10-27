@@ -5,6 +5,8 @@ import dotenv from 'dotenv'
 
 // const userRoutes=require("./Routes/userRoutes.js")
 import userRoutes from './Routes/userRoutes.js';
+import tourRoutes from './Routes/tourRoutes.js';
+import adminRoutes from './Routes/adminRoutes.js';
 
 
 const app=express();
@@ -21,7 +23,10 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Routes
+app.use("/api/v1/admin",adminRoutes)
 app.use("/api/v1/user",userRoutes);
+
+app.use("/tour",tourRoutes);
 
 app.get("/",(req,res)=>{
     res.send("Hello Travel booking App");
