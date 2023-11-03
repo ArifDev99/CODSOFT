@@ -34,6 +34,7 @@ formEl.addEventListener("submit",async(e)=>{
     try {
         const res=await axios.post('/api/v1/user/login',data)
         console.log(res.data)
+        localStorage.setItem("Token",res.data.token)
     } catch (error) {
         const message=error?.response?.data?.message
         message ? errorEl.textContent=message: ""

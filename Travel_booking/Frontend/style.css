@@ -265,6 +265,13 @@ input[type="date"]:before {
 
   border-radius: 1rem;
   overflow: hidden;
+  /* transition: transform 0.3s; */
+}
+
+.card :hover{
+  /* transform: translate(); */
+  /* box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1); */
+  /* transform: scale(1.2); */
 }
 
 .card-img{

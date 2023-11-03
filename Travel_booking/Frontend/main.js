@@ -6,7 +6,7 @@ const registerBtn=document.getElementById("register-btn");
 
 
 registerBtn.addEventListener("click",()=>{
-    window.location.href=`http://127.0.0.1:5173/Register/register.html`
+    window.location.href=`http://localhost:5173/Register/register.html`
 })
 
 document.addEventListener("DOMContentLoaded", async()=>{
@@ -40,7 +40,20 @@ document.addEventListener("DOMContentLoaded", async()=>{
 
     })
     slides.appendChild(cardSection)
+
+    const tourPagebtn=document.querySelectorAll(".TourpageBtn")
+    
+    // tourPagebtn.addEventListener("click",(e)=>(console.log(e.target)))
+    // console.log(tourPagebtn);
+    tourPagebtn.forEach((btn)=>{
+        btn.addEventListener("click",(e)=>{
+            // console.log(e.target);
+            window.location.href=`TourPage/Tourpage.html?id=${e.target.id}`
+        })
+    })
 })
+
+
 
 
 function makeCard(tour){
@@ -78,6 +91,8 @@ function makeCard(tour){
 
     const btn=document.createElement("button");
     btn.type="button";
+    btn.id=tour._id
+    btn.classList.add("TourpageBtn")
     btn.textContent="Know More"
     cardContent.appendChild(btn);
 
@@ -88,3 +103,6 @@ function makeCard(tour){
     // slides.appendChild(card)
     return card
 }
+
+
+

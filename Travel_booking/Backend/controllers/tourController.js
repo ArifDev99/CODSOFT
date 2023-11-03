@@ -1,4 +1,5 @@
 import Tour from "../Models/tourModel.js";
+import tourRoutes from "../Routes/tourRoutes.js";
 import { validfirstName } from "../utils/validator.js";
 
 const createTour=async (req,res)=>{
@@ -58,5 +59,23 @@ const getAllTour=async(req,res)=>{
     } 
 }
 
+const getTour= async(req,res)=>{
+    try {
+        const tourid=req.params.id
+        console.log(tourid);
+        const tour=await Tour.findOne({_id:tourid}).exec();
+        if(!tour){
+            return res.status(400).json({massage:"Some Thing Went Worng"})
+        }
+        return res.status(201).json({
+            massage:"Successful",
+            tour
+        })
+        // console.log(tour);
+    } catch (error) {
+        return res.status(500).send(error)
+    }
+}
 
-export {getAllTour,createTour};
+
+export {getAllTour,createTour,getTour};

@@ -46,7 +46,7 @@ const registerUser=async (req,res)=>{
             email: createuser.email,
         };
 
-        const bareartoken=jwt.sign(payload,process.env.JWT_SECRET,{
+        const bareartoken=jwt.sign(payload,process.env.JWT_SECRET.toString('utf-8'),{
             expiresIn:'1h',
         })
         
@@ -101,7 +101,7 @@ const loginUser=async(req,res)=>{
             email: isuserExist.email,
         };
 
-        const bareartoken=jwt.sign(payload,process.env.JWT_SECRET,{
+        const bareartoken=jwt.sign(payload,process.env.JWT_SECRET.toString("utf-8"),{
             expiresIn:"1h"
         })
         res.cookie('jwt', bareartoken);
